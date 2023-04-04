@@ -137,7 +137,11 @@ const filteredCountriesByRegion = filteredCountries.filter(country => {
                                 <div className="country-details">
                                     <div className="country-population">
                                         <h4 className="country-detail-title"> Population: </h4>
-                                        <span className="country-detail-value"> {population} </span>
+                                        <span className="country-detail-value">
+                                            {/* add a comma after the first 3 numbers and after the next 3 */}
+                                            {population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                                            
+                                        </span>
                                     </div>
                                     <div className="country-region">
                                         <h4 className="country-detail-title"> Region: </h4>
