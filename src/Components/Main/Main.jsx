@@ -11,7 +11,7 @@ const Main = () => {
         const [error, setError] = useState(false)
         const [countrySearch, setCountrySearch] = useState('')
         const [regionFilter, setRegionFilter] = useState('')
-        const [country, setCountry] = useState({})
+        // const [country, setCountry] = useState({})
         const [currentPage, setCurrentPage] = useState(1);
 
      let {name} = useParams();
@@ -38,10 +38,10 @@ const Main = () => {
               }
 
 
-        const handleCountryClick = (country) => {
-            setCountry(country)
+        // const handleCountryClick = (country) => {
+        //     setCountry(country)
          
-        }
+        // }
 
         useEffect(() => {
             fetch(URL)
@@ -71,14 +71,14 @@ const filteredCountriesByRegion = filteredCountries.filter(country => {
     return country.region.toLowerCase().includes(regionFilter.toLowerCase())
 })
 
-const handleBackToTop = () => {
-    // smooth scroll to top
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    })
-}
+// const handleBackToTop = () => {
+//     // smooth scroll to top
+//     window.scrollTo({
+//         top: 0,
+//         left: 0,
+//         behavior: 'smooth'
+//     })
+// }
 
   return (
     <div className="main">
