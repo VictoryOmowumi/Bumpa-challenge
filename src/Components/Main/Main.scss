@@ -1,0 +1,286 @@
+.main{
+    width: 100%;
+    height: max-content ;
+    padding: 10px 40px;
+    position: relative;
+    top: 70px;
+    background: var(--white);
+  .main-content{
+    display: flex;
+    flex-direction: column;
+    .search-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        margin-top: 2rem;
+
+        .search{
+            width: 30%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            padding: 0 10px;
+           box-shadow: var(--box-shadow);
+           background: var(--input);
+
+           .search-icon{
+                color: var(--black);
+                font-size: 20px;
+
+           }
+           input{
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text);
+           }
+        }
+        .filter{
+            width: 20%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 5px;
+            padding: 0 10px;
+           box-shadow: var(--box-shadow);
+           background: var(--white);
+
+           
+           select{
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+                background: transparent;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--text);
+           
+                
+                option{
+                    font-size: 16px;
+                    color: var(--scroll-btn);
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    padding: 10px;
+                    margin-bottom: 1rem;
+
+                  
+                    
+                }
+               
+
+
+           }
+
+
+
+        }
+    }
+
+    .countries-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) ;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 20px;
+
+        .link{
+            text-decoration: none;
+          
+        }
+
+        .country-card{
+            width: 300px;
+            height: 400px;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+
+
+            .country-flag{
+                width: 100%;
+                min-height: 200px ;
+                object-fit: cover;
+                
+                
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .country-info{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 1rem;
+                padding: 0 1.5rem;
+                margin: 1rem;
+
+                .country-name{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--text);
+                }
+                .country-details{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+                  
+                    .country-population,
+                    .country-region,
+                    .country-capital{
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        
+                        .country-detail-title{
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: var(--black);
+                        }
+                        .country-detail-value{
+                            font-size: 14px;
+                            font-weight: 400;
+                            color: var(--text);
+                        }
+                    } 
+                    
+                }
+            }
+        }
+
+       
+    }
+
+    .pagination{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--scroll-btn);
+            border: none;
+            outline: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            color: var(--white);
+
+            &:hover{
+               border: 1px solid var(--scroll-btn-hover);
+                background: transparent;
+                color: var(--scroll-btn-hover);
+            }
+        }
+
+        .active{
+            border: 1px solid var(--scroll-btn-hover);
+            background: transparent;
+            color: var(--scroll-btn-hover);
+        }
+    }
+  }
+
+  .back-to-top{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--scroll-btn);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      z-index: 1000;
+
+      &:hover{
+          background: var(--scroll-btn-hover);
+      }
+      button{
+            border: none;
+            outline: none;
+            background: transparent;
+      }
+      .back-to-top-icon{
+          color: rgb(255, 255, 255);
+          font-size: 25px;
+      }
+    }
+}
+
+// media queries
+
+@media screen and (max-width: 768px){
+    .main{
+        padding: 10px 20px;
+        top: 10px;
+        .main-content{
+            .search-container{
+                flex-direction: column;
+                gap: 1rem;
+
+                .search{
+                    width: 100%;
+                }
+                .filter{
+                    width: 100%;
+                }
+            }
+            .countries-container{
+                justify-content: center;
+            }
+
+            .pagination{
+                justify-content: center;
+
+                button{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

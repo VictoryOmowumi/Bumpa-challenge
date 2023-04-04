@@ -1,0 +1,249 @@
+.main {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 10px 40px;
+  position: relative;
+  top: 70px;
+  background: var(--white);
+}
+.main .main-content {
+  display: flex;
+  flex-direction: column;
+}
+.main .main-content .search-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-top: 2rem;
+}
+.main .main-content .search-container .search {
+  width: 30%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-shadow: var(--box-shadow);
+  background: var(--input);
+}
+.main .main-content .search-container .search .search-icon {
+  color: var(--black);
+  font-size: 20px;
+}
+.main .main-content .search-container .search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.main .main-content .search-container .filter {
+  width: 20%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  padding: 0 10px;
+  box-shadow: var(--box-shadow);
+  background: var(--white);
+}
+.main .main-content .search-container .filter select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+}
+.main .main-content .search-container .filter select option {
+  font-size: 16px;
+  color: var(--scroll-btn);
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.main .main-content .countries-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px;
+}
+.main .main-content .countries-container .link {
+  text-decoration: none;
+}
+.main .main-content .countries-container .country-card {
+  width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.main .main-content .countries-container .country-card .country-flag {
+  width: 100%;
+  min-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .main-content .countries-container .country-card .country-flag img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .main-content .countries-container .country-card .country-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  margin: 1rem;
+}
+.main .main-content .countries-container .country-card .country-info .country-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+}
+.main .main-content .countries-container .country-card .country-info .country-details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.main .main-content .countries-container .country-card .country-info .country-details .country-population,
+.main .main-content .countries-container .country-card .country-info .country-details .country-region,
+.main .main-content .countries-container .country-card .country-info .country-details .country-capital {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .main-content .countries-container .country-card .country-info .country-details .country-population .country-detail-title,
+.main .main-content .countries-container .country-card .country-info .country-details .country-region .country-detail-title,
+.main .main-content .countries-container .country-card .country-info .country-details .country-capital .country-detail-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
+}
+.main .main-content .countries-container .country-card .country-info .country-details .country-population .country-detail-value,
+.main .main-content .countries-container .country-card .country-info .country-details .country-region .country-detail-value,
+.main .main-content .countries-container .country-card .country-info .country-details .country-capital .country-detail-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+}
+.main .main-content .pagination {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.main .main-content .pagination button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--scroll-btn);
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: var(--white);
+}
+.main .main-content .pagination button:hover {
+  border: 1px solid var(--scroll-btn-hover);
+  background: transparent;
+  color: var(--scroll-btn-hover);
+}
+.main .main-content .pagination .active {
+  border: 1px solid var(--scroll-btn-hover);
+  background: transparent;
+  color: var(--scroll-btn-hover);
+}
+.main .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--scroll-btn);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+.main .back-to-top:hover {
+  background: var(--scroll-btn-hover);
+}
+.main .back-to-top button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.main .back-to-top .back-to-top-icon {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 10px 20px;
+    top: 10px;
+  }
+  .main .main-content .search-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main .main-content .search-container .search {
+    width: 100%;
+  }
+  .main .main-content .search-container .filter {
+    width: 100%;
+  }
+  .main .main-content .countries-container {
+    justify-content: center;
+  }
+  .main .main-content .pagination {
+    justify-content: center;
+  }
+  .main .main-content .pagination button {
+    width: 30px;
+    height: 30px;
+  }
+}/*# sourceMappingURL=Main.css.map */
